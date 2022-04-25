@@ -22,8 +22,34 @@ array.forEach(
     }
 )
 
-function myfunction () {
-    let arr = ['yellow', 'green', 'blue'];
-    let randcolor = Math.floor(Math.random()*arr.length);
-    document.getElementsByTagName('body').style.background = randcolor;
+function carsList(){
+    const cars = ['saab', 'volvo', 'BMW'];
+    const uiListElement = document.getElementById('car_types');
+    for(let carItem = 0; carItem<cars.length; carItem++){
+        const element = cars[carItem];
+        const node = document.createElement('li');
+        const textnode = document.createTextNode(element);
+        node.appendChild(textnode);
+        uiListElement.appendChild(node);
+
+    }
 }
+carsList()
+
+function loopsMap(){
+    //create a map
+
+    const fruits = new Map([
+        ['apples', 500],
+        ['banans', 300],
+        ['oranges', 200]
+    ])
+
+    //console.log(fruits);
+
+    fruits.forEach(function(value, key){
+        console.log('key' + key + 'value' + value)
+    })
+}
+
+loopsMap();
