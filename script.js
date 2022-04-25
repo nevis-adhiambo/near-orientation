@@ -53,3 +53,23 @@ function loopsMap(){
 }
 
 loopsMap();
+
+//event listener on the input
+
+const input = document.querySelector('input');
+//const src = document.getElementById('source');
+let result = document.getElementById('result');
+
+input.addEventListener('input', updateValue);
+
+function updateValue(e) {
+    
+  result.innerHTML = e.target.value;
+}
+
+
+//event listener on the button
+let btn = document.getElementById('btn');
+btn.addEventListener('click', function(){
+    alert('Hello world!')
+})
